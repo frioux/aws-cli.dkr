@@ -10,6 +10,10 @@ RUN apk add --update python py-pip groff less \
        /usr/lib/python2.7/pydoc_data \
        /var/cache/apk/*
 
+LABEL io.whalebrew.name aws
+LABEL io.whalebrew.config.environment '["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]'
+LABEL io.whalebrew.config.volumes '["~/.aws:/.aws"]'
+
 VOLUME ["/.aws"]
 
 ENTRYPOINT ["aws"]

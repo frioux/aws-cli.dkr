@@ -29,18 +29,7 @@ without installing python modules system-wide.
 There is only a single volume, used for configuration: `/.aws/`.  It is
 absolutely required and almost any usage without it is likely to fail.
 
-## Shortcut Usage
+## Whalebrew
 
-I recommend putting the following script in your path to make usage of this
-container easier:
-
-```
-#!/bin/dash
-
-exec docker run -it --rm \
-  --volume ~/.aws:/.aws  \
-  --user $(id -u)        \
-  frew/aws-cli           \
-  "$@"
-```
+Full whalebrew support!
 
