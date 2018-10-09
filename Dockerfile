@@ -13,6 +13,7 @@ RUN apk add --update python py-pip groff less \
 LABEL io.whalebrew.name aws
 LABEL io.whalebrew.config.environment '["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_DEFAULT_REGION"]'
 LABEL io.whalebrew.config.volumes '["~/.aws:/.aws"]'
+LABEL io.whalebrew.config.networks '["host"]'
 
 VOLUME ["/.aws"]
 
